@@ -9,7 +9,7 @@ import { ProductCartComponent } from "./product-cart/product-cart.component";
   <div class="p-8 grid-cols-2 gap-4" >
     @for(product of products();track product.id){
       <div>
-        <app-product-cart />
+        <app-product-cart [product]="product"/>
       </div>
     }
   </div>
