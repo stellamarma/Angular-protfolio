@@ -6,7 +6,7 @@ import { PrimaryButtonComponent } from "../../../commponenets/primary-button/pri
   selector: 'app-product-cart',
   imports: [PrimaryButtonComponent],
   template: `
-      <div class="bg-white shadow-md border rounded-xl p-6 flex flex-col gap-6 relative">
+      <div class="bg-white shadow-md border rounded-xl p-6 flex flex-col gap-6 relative ">
         <div class="mx-auto">
           <img [src]="product().image" class="w-[200] h-[100px] object-contain"/>
         </div>
@@ -15,8 +15,18 @@ import { PrimaryButtonComponent } from "../../../commponenets/primary-button/pri
           <span class="text-md font-bold">{{product().writer}}</span>
           <span class="text-sm font-bold">{{product().price + '€'}} </span>
           <app-primary-button lebel="Add to Cart" class="mt-3"/>
+        
+          <span class="absolute top-2 right-3 text-sm font-bold">
+        @if (product().stock){
+          {{product().stock }} left
+        }@else {
+          Out of stock
+        }
+        </span>
+        
         </div>
       </div>
+
   `,
   styles: ``
 })

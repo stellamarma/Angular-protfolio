@@ -7,6 +7,7 @@ import { ProductsListComponent } from "./pages/products-list/products-list.compo
   template: `
     <app-header />
     <app-products-list />
+
   `,
   styles: [],
 })
