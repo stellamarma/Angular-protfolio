@@ -6,7 +6,7 @@ import { ProductCartComponent } from "./product-cart/product-cart.component";
   selector: 'app-products-list',
   imports: [ProductCartComponent],
   template: `
-  <div class="p-8 grid grid-cols-2 md:grid-cols-4 gap-4" >
+  <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-4" >
     @for(product of products();track product.id){
       <app-product-cart [product]="product"/>
 
@@ -57,7 +57,7 @@ export class ProductsListComponent {
 },
 {
     id: 6,
-    title: "The Catcher in the Rye",
+    title: "Catcher in the Rye",
     writer: "J.D. Salinger",
     image: "https://i.pinimg.com/736x/4b/be/9c/4bbe9c695bd2c2005847108120df0612.jpg",
     price: 13.49,

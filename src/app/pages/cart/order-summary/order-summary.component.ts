@@ -24,13 +24,13 @@ export class OrderSummaryComponent {
 
   cartService = inject(CartService);
 
-  total= computed(()=>{
-    let total=0;
-    for(const item of this.cartService.cart()){
-      total+=item.price;
+  total = computed(() => {
+    let total = 0;
+    for (const item of this.cartService.cart()) {
+        total += item.price;
     }
+    return total.toFixed(2); // Επιστρέφει τη συνολική τιμή με 2 δεκαδικά
+});
 
-    return total;
-  })
 
 }
