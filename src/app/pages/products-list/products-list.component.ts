@@ -6,11 +6,7 @@ import { ProductCartComponent } from "./product-cart/product-cart.component";
   selector: 'app-products-list',
   imports: [ProductCartComponent],
   template: `
-<<<<<<< HEAD
-  <div class="p-8 grid grid-cols-2 md:grid-cols-3 gap-4" >
-=======
   <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-4" >
->>>>>>> fb214f39ad1cb3fd9a704984e707b87f56aa7f37
     @for(product of products();track product.id){
       <app-product-cart [product]="product"/>
 
